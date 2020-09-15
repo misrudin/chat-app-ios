@@ -13,12 +13,13 @@
 		B33C8CA525111A4100CDCBEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33C8CA325111A4100CDCBEC /* Main.storyboard */; };
 		B33C8CA725111A4300CDCBEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33C8CA625111A4300CDCBEC /* Assets.xcassets */; };
 		B33C8CAA25111A4300CDCBEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33C8CA825111A4300CDCBEC /* LaunchScreen.storyboard */; };
-		B33C8CBA2511246300CDCBEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CB92511246300CDCBEC /* LoginViewController.swift */; };
 		B33C8CBC2511247300CDCBEC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CBB2511247300CDCBEC /* RegisterViewController.swift */; };
 		B33C8CBE2511248200CDCBEC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CBD2511248200CDCBEC /* ProfileViewController.swift */; };
 		B33C8CC0251124A400CDCBEC /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CBF251124A400CDCBEC /* NewConversationViewController.swift */; };
 		B33C8CC2251124B600CDCBEC /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CC1251124B600CDCBEC /* PhotoViewerViewController.swift */; };
 		B33C8CC4251124D400CDCBEC /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CC3251124D400CDCBEC /* VideoPlayerViewController.swift */; };
+		B33C8CC825112F5D00CDCBEC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CC725112F5D00CDCBEC /* Extensions.swift */; };
+		B33C8CCA2511311A00CDCBEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CC92511311A00CDCBEC /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +31,13 @@
 		B33C8CA625111A4300CDCBEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33C8CA925111A4300CDCBEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33C8CAB25111A4300CDCBEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B33C8CB92511246300CDCBEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B33C8CBB2511247300CDCBEC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B33C8CBD2511248200CDCBEC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B33C8CBF251124A400CDCBEC /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		B33C8CC1251124B600CDCBEC /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		B33C8CC3251124D400CDCBEC /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		B33C8CC725112F5D00CDCBEC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B33C8CC92511311A00CDCBEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B33C8CA125111A4100CDCBEC /* ConversationViewController.swift */,
-				B33C8CB92511246300CDCBEC /* LoginViewController.swift */,
-				B33C8CBB2511247300CDCBEC /* RegisterViewController.swift */,
+				B33C8CC62511279100CDCBEC /* Login */,
 				B33C8CBD2511248200CDCBEC /* ProfileViewController.swift */,
 				B33C8CBF251124A400CDCBEC /* NewConversationViewController.swift */,
 				B33C8CC1251124B600CDCBEC /* PhotoViewerViewController.swift */,
@@ -120,6 +121,7 @@
 			children = (
 				B33C8C9D25111A4100CDCBEC /* AppDelegate.swift */,
 				B33C8C9F25111A4100CDCBEC /* SceneDelegate.swift */,
+				B33C8CC725112F5D00CDCBEC /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -131,6 +133,15 @@
 				B33C8CA825111A4300CDCBEC /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B33C8CC62511279100CDCBEC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B33C8CBB2511247300CDCBEC /* RegisterViewController.swift */,
+				B33C8CC92511311A00CDCBEC /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,12 +217,13 @@
 			files = (
 				B33C8CBE2511248200CDCBEC /* ProfileViewController.swift in Sources */,
 				B33C8CC0251124A400CDCBEC /* NewConversationViewController.swift in Sources */,
-				B33C8CBA2511246300CDCBEC /* LoginViewController.swift in Sources */,
 				B33C8CC4251124D400CDCBEC /* VideoPlayerViewController.swift in Sources */,
 				B33C8CBC2511247300CDCBEC /* RegisterViewController.swift in Sources */,
+				B33C8CC825112F5D00CDCBEC /* Extensions.swift in Sources */,
 				B33C8CA225111A4100CDCBEC /* ConversationViewController.swift in Sources */,
 				B33C8CC2251124B600CDCBEC /* PhotoViewerViewController.swift in Sources */,
 				B33C8C9E25111A4100CDCBEC /* AppDelegate.swift in Sources */,
+				B33C8CCA2511311A00CDCBEC /* LoginViewController.swift in Sources */,
 				B33C8CA025111A4100CDCBEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

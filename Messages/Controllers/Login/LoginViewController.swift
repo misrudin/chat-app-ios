@@ -123,7 +123,12 @@ class LoginViewController: UIViewController {
                 return
         }
         
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {authResult, error in
+//        firebase login
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResult, error in
+            guard let strongSelf = self else {
+                return
+            }
             guard let result = authResult, error == nil else{
                 print("Failed to logged in user with email \(email)")
                 return
@@ -132,8 +137,12 @@ class LoginViewController: UIViewController {
             let user = result.user
             
             print("Logged in \(user)")
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
     }
+    
+    
+//    alert inputan kosong
     
     func alertUserLoginError(){
         let alert = UIAlertController(title: "Woops..", message: "Please enter all information to log in!", preferredStyle: .alert)
@@ -141,6 +150,8 @@ class LoginViewController: UIViewController {
         
         present(alert,animated: true)
     }
+    
+//    navigate ke register
 
     @objc private func ditTapRegister(){
         let vc = RegisterViewController()

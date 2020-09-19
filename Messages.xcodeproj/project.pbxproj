@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00EDF86560479E88EBEEDBA0 /* Pods_Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1003B635035A4182CE2ADBD /* Pods_Messages.framework */; };
+		B33B1346251521ED00842144 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B1345251521ED00842144 /* DatabaseManager.swift */; };
 		B33C8C9E25111A4100CDCBEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8C9D25111A4100CDCBEC /* AppDelegate.swift */; };
 		B33C8CA025111A4100CDCBEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8C9F25111A4100CDCBEC /* SceneDelegate.swift */; };
 		B33C8CA225111A4100CDCBEC /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CA125111A4100CDCBEC /* ConversationViewController.swift */; };
@@ -28,6 +29,7 @@
 		33BD440E4DF949892E2ABAE2 /* Pods-Messages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.release.xcconfig"; path = "Target Support Files/Pods-Messages/Pods-Messages.release.xcconfig"; sourceTree = "<group>"; };
 		791FA04488B37EF62AAFBCFA /* Pods-Messages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.debug.xcconfig"; path = "Target Support Files/Pods-Messages/Pods-Messages.debug.xcconfig"; sourceTree = "<group>"; };
 		B1003B635035A4182CE2ADBD /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33B1345251521ED00842144 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B33C8C9A25111A4100CDCBEC /* Messages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33C8C9D25111A4100CDCBEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B33C8C9F25111A4100CDCBEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				B33C8C9D25111A4100CDCBEC /* AppDelegate.swift */,
 				B33C8C9F25111A4100CDCBEC /* SceneDelegate.swift */,
 				B33C8CC725112F5D00CDCBEC /* Extensions.swift */,
+				B33B1345251521ED00842144 /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,7 +171,6 @@
 				791FA04488B37EF62AAFBCFA /* Pods-Messages.debug.xcconfig */,
 				33BD440E4DF949892E2ABAE2 /* Pods-Messages.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -289,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33C8CBE2511248200CDCBEC /* ProfileViewController.swift in Sources */,
+				B33B1346251521ED00842144 /* DatabaseManager.swift in Sources */,
 				B33C8CC0251124A400CDCBEC /* NewConversationViewController.swift in Sources */,
 				B33C8CC4251124D400CDCBEC /* VideoPlayerViewController.swift in Sources */,
 				B33C8CBC2511247300CDCBEC /* RegisterViewController.swift in Sources */,

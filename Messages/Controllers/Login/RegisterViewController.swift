@@ -190,24 +190,34 @@ class RegisterViewController: UIViewController {
             
 //            firebase register with email
             
-            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] authResult,error in
+            DatabaseManager.shared.userExsist(with: email, completion: {[weak self] exist in
                 guard let strongSelf = self else {
                     return
                 }
-                guard authResult != nil, error == nil else {
-                    print("Error create user !")
+                guard !exist else {
+//                    user sudah ada munculkan alert
+                    strongSelf.alertUserLoginError(message: "Saudah ada akun terdaftar dengan email : \(email)")
                     return
                 }
-                
-                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
-                                                                    lastName: lastName,
-                                                                    emailAddress: email))
-                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+                FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult,error in
+                    
+                    guard authResult != nil, error == nil else {
+                        print("Error create user !")
+                        return
+                    }
+                    
+                    DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
+                                                                        lastName: lastName,
+                                                                        emailAddress: email))
+                    strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+                })
+            
             })
         }
+           
         
-        func alertUserLoginError(){
-            let alert = UIAlertController(title: "Woops..", message: "Please enter all information to resgister!", preferredStyle: .alert)
+    func alertUserLoginError(message: String = "Please enter all information to resgister!"){
+            let alert = UIAlertController(title: "Woops..", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             
             present(alert,animated: true)

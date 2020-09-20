@@ -4,8 +4,15 @@
 target 'Messages' do
   use_frameworks!
 
+#firebase
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+
+#Facebook
+pod 'FBSDKLoginKit'
+
+#google
+pod 'GoogleSignIn'
 
 end

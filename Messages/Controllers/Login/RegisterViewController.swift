@@ -207,6 +207,7 @@ class RegisterViewController: UIViewController {
             guard !exist else {
                 //                    user sudah ada munculkan alert
                 strongSelf.alertUserLoginError(message: "Saudah ada akun terdaftar dengan email : \(email)")
+                print(exist)
                 return
             }
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult,error in

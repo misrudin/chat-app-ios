@@ -24,6 +24,7 @@
 		B33C8CCA2511311A00CDCBEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CC92511311A00CDCBEC /* LoginViewController.swift */; };
 		B349A00525174BAE00B3B1C6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349A00425174BAE00B3B1C6 /* ChatViewController.swift */; };
 		B349A024251767FB00B3B1C6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349A023251767FB00B3B1C6 /* StorageManager.swift */; };
+		B397727F251A1D530078AE66 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397727E251A1D530078AE66 /* ConversationTableViewCell.swift */; };
 		B3FE455625139FEF004D148A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3FE455525139FEF004D148A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		B33C8CC92511311A00CDCBEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B349A00425174BAE00B3B1C6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B349A023251767FB00B3B1C6 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B397727E251A1D530078AE66 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		B3FE455525139FEF004D148A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Users/indooffice4/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 			children = (
 				B33C8CB82511225100CDCBEC /* Storyboard */,
 				B33C8CA625111A4300CDCBEC /* Assets.xcassets */,
+				B397727E251A1D530078AE66 /* ConversationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				B33C8CC2251124B600CDCBEC /* PhotoViewerViewController.swift in Sources */,
 				B33C8C9E25111A4100CDCBEC /* AppDelegate.swift in Sources */,
 				B33C8CCA2511311A00CDCBEC /* LoginViewController.swift in Sources */,
+				B397727F251A1D530078AE66 /* ConversationTableViewCell.swift in Sources */,
 				B349A00525174BAE00B3B1C6 /* ChatViewController.swift in Sources */,
 				B33C8CA025111A4100CDCBEC /* SceneDelegate.swift in Sources */,
 				B349A024251767FB00B3B1C6 /* StorageManager.swift in Sources */,

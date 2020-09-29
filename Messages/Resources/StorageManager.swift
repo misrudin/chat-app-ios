@@ -49,6 +49,60 @@ final class StorageManager{
         })
     }
     
+    /// Upload image will be send to convo
+    public func uploadMessagePhoto(with data: Data,
+                                     fileName: String,
+                                     completion: @escaping UploadPictureCompletion){
+        storage.child("message_images/\(fileName)").putData(data,metadata: nil,completion: {[weak self] metadata, error in
+            guard error == nil else {
+                // failed
+                print("Failed to upload photo to firebase.")
+                completion(.failure(StorageErrors.failedToUpload))
+                return
+            }
+            
+            self?.storage.child("message_images/\(fileName)").downloadURL(completion: {url, error in
+                guard let url = url else {
+                    print("Failed to download url")
+                    completion(.failure(StorageErrors.failedToGetDownloadUrl))
+                    return
+                }
+                
+                let urlString = url.absoluteString
+                
+                print("Download url returned : \(urlString)")
+                completion(.success(urlString))
+            })
+        })
+    }
+    
+    /// Upload video message
+    public func uploadMessageVideo(with fileUrl: URL,
+                                     fileName: String,
+                                     completion: @escaping UploadPictureCompletion){
+        storage.child("message_videos/\(fileName)").putFile(from: fileUrl,metadata: nil,completion: {[weak self] metadata, error in
+            guard error == nil else {
+                // failed
+                print("Failed to upload video file to firebase.")
+                completion(.failure(StorageErrors.failedToUpload))
+                return
+            }
+            
+            self?.storage.child("message_videos/\(fileName)").downloadURL(completion: {url, error in
+                guard let url = url else {
+                    print("Failed to download url")
+                    completion(.failure(StorageErrors.failedToGetDownloadUrl))
+                    return
+                }
+                
+                let urlString = url.absoluteString
+                
+                print("Download url returned : \(urlString)")
+                completion(.success(urlString))
+            })
+        })
+    }
+    
     public enum StorageErrors: Error{
         case failedToUpload
         case failedToGetDownloadUrl

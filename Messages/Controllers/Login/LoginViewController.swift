@@ -87,15 +87,15 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         loginObserver = NotificationCenter.default.addObserver(forName: .didLoginNotification,
-                                                   object: nil,
-                                                   queue: .main,
-                                                   using: { [weak self] _ in
-                                                    
-                                                    guard let strongSelf = self else {
-                                                        return
-                                                    }
-                                                    strongSelf.navigationController?.dismiss(animated: true, completion: nil)
-                                                   })
+                                                               object: nil,
+                                                               queue: .main,
+                                                               using: { [weak self] _ in
+                                                                
+                                                                guard let strongSelf = self else {
+                                                                    return
+                                                                }
+                                                                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+                                                               })
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         

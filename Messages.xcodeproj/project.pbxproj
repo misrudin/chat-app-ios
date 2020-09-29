@@ -24,6 +24,7 @@
 		B33C8CCA2511311A00CDCBEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33C8CC92511311A00CDCBEC /* LoginViewController.swift */; };
 		B349A00525174BAE00B3B1C6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349A00425174BAE00B3B1C6 /* ChatViewController.swift */; };
 		B349A024251767FB00B3B1C6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349A023251767FB00B3B1C6 /* StorageManager.swift */; };
+		B3527690252378C700783FF9 /* NewConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352768F252378C700783FF9 /* NewConversationCell.swift */; };
 		B397727F251A1D530078AE66 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397727E251A1D530078AE66 /* ConversationTableViewCell.swift */; };
 		B3FE455625139FEF004D148A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3FE455525139FEF004D148A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		B33C8CC92511311A00CDCBEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B349A00425174BAE00B3B1C6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B349A023251767FB00B3B1C6 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B352768F252378C700783FF9 /* NewConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationCell.swift; sourceTree = "<group>"; };
 		B397727E251A1D530078AE66 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		B3FE455525139FEF004D148A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Users/indooffice4/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 				B33C8CB82511225100CDCBEC /* Storyboard */,
 				B33C8CA625111A4300CDCBEC /* Assets.xcassets */,
 				B397727E251A1D530078AE66 /* ConversationTableViewCell.swift */,
+				B352768F252378C700783FF9 /* NewConversationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33C8CBE2511248200CDCBEC /* ProfileViewController.swift in Sources */,
+				B3527690252378C700783FF9 /* NewConversationCell.swift in Sources */,
 				B33B1346251521ED00842144 /* DatabaseManager.swift in Sources */,
 				B33C8CC0251124A400CDCBEC /* NewConversationViewController.swift in Sources */,
 				B33C8CC4251124D400CDCBEC /* VideoPlayerViewController.swift in Sources */,

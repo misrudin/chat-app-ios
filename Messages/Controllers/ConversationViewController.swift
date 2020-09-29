@@ -47,6 +47,8 @@ class ConversationViewController: UIViewController {
         label.isHidden = true
         return label
     }()
+    
+    private var loginObserver: NSObjectProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,12 +61,28 @@ class ConversationViewController: UIViewController {
         
         fetchConversation()
         startListeningConversation()
+        
+        loginObserver = NotificationCenter.default.addObserver(forName: .didLoginNotification,
+                                                               object: nil,
+                                                               queue: .main,
+                                                               using: { [weak self] _ in
+                                                                
+                                                                guard let strongSelf = self else {
+                                                                    return
+                                                                }
+                                                                strongSelf.startListeningConversation()
+                                                               })
     }
     
     private func startListeningConversation(){
         guard let email = UserDefaults.standard.value(forKey: "email") as? String else{
             return
         }
+        
+        if let observer = loginObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+        
         let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
         DatabaseManager.shared.getAllConversation(for: safeEmail, completion: {[weak self] result in
             switch result {
@@ -94,10 +112,9 @@ class ConversationViewController: UIViewController {
         present(navVc, animated: true)
     }
     
-    private func createNewConversation(result : [String: String]){
-        guard let name = result["name"], let email = result["email"] else {
-            return
-        }
+    private func createNewConversation(result : SearchResult){
+        let name = result.name
+        let email = result.email
         let vc = ChatViewController(with: email,id: nil)
         vc.isNewConversation = true
         vc.title = name
